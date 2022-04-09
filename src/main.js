@@ -1,6 +1,6 @@
 import './style.scss';
+import imgURL from './images/space.png'
 import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 // Setup
 
@@ -44,7 +44,7 @@ Array(800).fill().forEach(addStar);
 
 // Background
 
-const spaceTexture = new THREE.TextureLoader().load('images/space.png');
+const spaceTexture = new THREE.TextureLoader().load(imgURL);
 scene.background = spaceTexture;
 
 // Scroll Animation
