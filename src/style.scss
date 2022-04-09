@@ -1,0 +1,169 @@
+@import url("https://use.typekit.net/jmk3xov.css");
+
+$dark-bg: rgba(15, 15, 15, 0.5);
+$light-bg: rgba(255, 255, 255, 0.5);
+$trans-speed: 600ms;
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+main {
+  width: 100vw;
+  color: white;
+  z-index: 99;
+  position: absolute;
+  width: 100%;
+  margin: 0px;
+  padding: 120px 0px;
+  
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+body{
+  height: 500vh;
+  overflow-x: hidden;
+  overflow-y: overlay;
+  margin: 0;
+  font-family: brandon-grotesque, sans-serif;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: #6649b8;
+    border-radius: 25px;
+  }
+}
+
+h1{
+  font-size: 50px;
+  margin-top: 0;
+  text-shadow: 2px 2px 15px black;
+}
+
+h2{
+  margin-top: 0;
+  font-size: 35px;
+}
+
+p{
+  font-size: 25px;
+  margin: 0;
+}
+
+header{
+  box-shadow: rgba(2, 8, 20, 0.18) 0px 0.35em 1.175em;
+  background-color: $light-bg;
+  padding: 2rem;
+  margin-bottom: 200px;
+  backdrop-filter: blur(0.5rem);
+
+  color: black;
+  grid-column: 2/9;
+
+  transition: $trans-speed;
+
+  &:hover{
+    transform: scale(1.06);
+  }
+}
+
+section{
+  transition: $trans-speed;
+  box-shadow: rgba(2, 8, 20, 0.18) 0px 0.35em 1.175em;
+  margin-bottom: 150px;
+  padding: 2rem;
+  backdrop-filter: blur(0.5rem);
+
+  a{
+    color: aqua;
+  }
+
+  &:hover{
+    transform: scale(1.06);
+  }
+
+  &.right{
+    grid-column: 5/11;
+  
+    &.dark{
+      color: white;
+      background-color: $dark-bg;
+
+      h2{
+        text-shadow: 2px 2px 15px white;
+      }
+    }
+    &.light{
+      color: black;
+      background-color: $light-bg;
+
+      h2{
+        text-shadow: 2px 2px 15px black;
+      }
+    }
+  }
+
+  &.left{
+    grid-column: 2/9;
+    &.dark{
+      color: white;
+      background-color: $dark-bg;
+
+      h2{
+        text-shadow: 2px 2px 15px white;
+      }
+    }
+    &.light{
+      color: black;
+      background-color: $light-bg;
+
+      h2{
+        text-shadow: 2px 2px 15px black;
+      }
+    }
+  }
+
+}
+
+  .projects{
+    background: hsl(0 0% 100% / 0.1);
+    backdrop-filter: blur(0.5rem);
+
+    grid-column: 2/12;
+
+    &:hover{
+      transform: none;
+    }
+
+    &__items{
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+  
+      &item{
+        background: hsl(0 0% 100% / 0.1);
+        backdrop-filter: blur(0.5rem);
+        transition: 300ms;
+        max-width: 250px;
+        padding: 10px;
+        height: fit-content;
+
+
+        img{
+          margin-top: 10px;
+          width: 100%;
+        }
+
+        &:hover{
+          transform: scale(1.06);
+        }
+      }
+    }
+  }
+
