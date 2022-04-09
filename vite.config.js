@@ -14,6 +14,9 @@ module.exports = defineConfig({
     rollupOptions: {
       input: {
         main: resolve(root, 'index.html'),
+      },
+      manualChunks: {
+        three: ['three']
       }
     }
   }
