@@ -19,6 +19,12 @@ camera.position.setX(-3);
 
 renderer.render(scene, camera);
 
+window.addEventListener('resize', () => {
+  renderer.setSize(window.innerWidth,window.innerHeight);
+  camera.aspect = window.innerWidth / window.innerHeight;
+
+  camera.updateProjectionMatrix();
+})
 // Lights
 
 const pointLight = new THREE.PointLight(0xffffff);
