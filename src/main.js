@@ -1,5 +1,5 @@
 import './style.scss';
-import imgURL from './images/space.png'
+import imgURL from './images/space.png?url'
 import * as THREE from 'three';
 
 // Setup
